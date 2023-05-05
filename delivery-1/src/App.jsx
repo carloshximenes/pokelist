@@ -1,6 +1,5 @@
 import "./App.css";
 import pokemonList from "./assets/images/images";
-import { getPokemonNameFromImage } from "./utils/pokemon.util";
 import Card from "./components/Card";
 import List from "./components/List";
 
@@ -9,8 +8,8 @@ const App = () => {
     <>
       <h1>Pokemon List</h1>
       <List>
-        {pokemonList.map((src, index) => (
-          <Card key={index} image={src} name={getPokemonNameFromImage(src)} />
+        {pokemonList.map((pkm, index) => (
+          <Card key={index} image={pkm.src} name={pkm.name} />
         ))}
       </List>
     </>
