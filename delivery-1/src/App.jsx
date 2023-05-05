@@ -9,7 +9,7 @@ const App = () => {
       <h1>Pokemon List</h1>
       <List>
         {pokemonList.map((pkm, index) => (
-          <Card key={index} image={pkm.src} name={pkm.name} />
+          <Card key={pkm.id} image={pkm.src} name={pkm.name} />
         ))}
       </List>
     </>
